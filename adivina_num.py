@@ -1,5 +1,9 @@
+#Reto de Programación
 import random
- #Español 
+
+#Se define el juego en diferentes lenguajes
+
+#Español 
 def jugar():
     n_intentos = 0
     adivinanza_alta = ["Estás arriba😦", "Baja más🙃","Estás más inflado que Venezuela💀","Apunta⬇️"]
@@ -28,7 +32,6 @@ def jugar():
         except ValueError: 
             print("Error. Ingresa un número") 
     print(f"Tuviste {n_intentos} intentos")
-    #volver_jugar() 
 
 def volver_jugar():
     while True:
@@ -72,7 +75,6 @@ def play():
         except ValueError: 
             print("Error. Insert a number") 
     print(f"You had {tries} tries")
-    #play_again()
 
 def play_again():
     while True:
@@ -116,7 +118,6 @@ def play_Ger():
         except ValueError: 
             print("Fehler. Gib eine Zahl ein") 
     print(f"Du hattest {tries} Versuche")
-    #play_again_Ger()
 
 def play_again_Ger():
     while True:
@@ -131,25 +132,25 @@ def play_again_Ger():
         else:
             print("Fehler. Schreib 'J', um weiterzuspielen oder 'N', um das Spiel zu beenden.")
 
-languages = ["ENG","ESP","DE"]
-print("Adivina el número! - Guess the number!"\n
-'Entre 1-50 - Between 1-50')
+#Programa principal
+languages = ["ENG","ESP","DE"] 
+print("Adivina el número! - Guess the number!")
 
 while True:
-    user_lang = input("Language/Idioma (ENG, ESP, DE): ").upper()
+    user_lang = input("Language - Idioma (ENG, ESP, DE): ").upper()
     if user_lang not in languages:
         print("Error.\n'ENG': English - Inglés - Englisch\n'ESP': Spanish - Español - Spanisch\n'DE': German - Alemán - Deustch")
     else:
         if user_lang == languages[0]:
-            print()
+            print("\nGuess the number!\nI've chosen a number between 1 and 50. Try to guess it😉")
             play()
             play_again()
         elif user_lang == languages[1]:
-            print()
+            print("\nAdivina el número!\nHe elegido un número entre 1 y 50. Intenta adivinarlo😉")
             jugar()
             volver_jugar()
         elif user_lang == languages[2]:
-            print()
+            print("\nErrate die Zahl!\nIch habe eine Zahl zwischen 1 und 50 gewählt. Versuch sie zu erraten😉")
             play_Ger()
             play_again_Ger()
         break
